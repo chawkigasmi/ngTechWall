@@ -1,0 +1,39 @@
+<h1>Modifier CV</h1>
+<form #formulaire="ngForm" *ngIf="personne">
+
+<div class="row">
+
+    <div class="col-md-12">
+        <label for="name" >Name</label>
+        <input required type="text" id="name" [(ngModel)]="personne.name" name="name" class="form-control">
+    </div>
+
+    <div class="col-md-12"> 
+        <label for="firstname" >Firstname</label>
+        <input required type="text" id="firstname" [(ngModel)]="personne.firstname" name="firstname" class="form-control">  
+    </div>
+
+    <div class="col-md-12">
+        <label for="job" >Job</label>
+        <input required type="text" id="job" [(ngModel)]="personne.job" name="job" class="form-control">
+    </div>
+
+    <div class="col-md-12">
+        <label for="age" >Age</label>
+        <input required min="0" max="170" type="number" id="age" [(ngModel)]="personne.age" name="age" class="form-control"> 
+    </div>
+
+    <div class="col-md-12">
+        <label for="cin" >Cin</label>
+        <input required type="number" id="cin" [(ngModel)]="personne.cin" name="cin" class="form-control">
+    </div>
+
+    <div class="col-md-12">
+        <label for="path" >Path</label>
+        <input type="text" id="path" [(ngModel)]="personne.path" name="path" class="form-control">
+    </div>
+
+    <button [disabled]="formulaire.invalid" (click)="updatePersonne()" class="btn btn-primary">Ajouter</button>
+</div>
+
+</form>

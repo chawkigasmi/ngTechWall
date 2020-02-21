@@ -1,0 +1,11 @@
+
+<h2 style="text-align:center">{{personne?.firstname | titlecase}} {{personne?.name | titlecase}} Profile Card</h2>
+
+<div class="card">
+  <img src="assets/images/{{personne?.path|defaultImage}}" alt="{{personne?.firstname | titlecase}}" style="width:100%">
+  <h1> {{personne?.firstname | titlecase}} {{personne?.name | titlecase}}</h1>
+  <h1>{{personne?.age}} year</h1>
+  <p class="title">{{personne?.job}}</p>
+  <p><button (click)="deletePersonne()">Supprimer</button></p>
+ <button class="btn btn-primary" (click)="updatePersonne()">Update</button>
+</div>

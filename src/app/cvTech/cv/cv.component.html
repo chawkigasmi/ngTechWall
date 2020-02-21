@@ -1,0 +1,49 @@
+<div class="row" style="margin-top:35px;">
+  <div class="col-md-6 col-sm-3">
+        <app-liste-cv 
+         (selectedPersonne)="selectPersonne($event)"
+         [personnes]="personnes">
+        </app-liste-cv>
+  </div>
+  <div class="col-md-6 col-sm-9">
+      <app-detail-cv 
+        *ngIf="selectedPersonne"
+       [personne]="selectedPersonne">
+    </app-detail-cv>
+
+    <div *ngIf="!selectedPersonne">
+      <div class="col-md-12 col-sm-12">
+        <div class="card-container">
+           <div class="card">
+               <div class="front">
+                   <div class="content">
+                       <div class="main">
+                           <h3 class="name">bonjour</h3>
+                           <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                       </div>
+                       <div class="footer">
+                          
+                       </div>
+                   </div>
+               </div> <!-- end front panel -->
+               <div class="back">
+                   <div class="header">
+                       <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                   </div>
+                   <div class="content">
+                       <div class="main">
+   
+    
+                       </div>
+                   </div>
+
+               </div> <!-- end back panel -->
+           </div> <!-- end card -->
+       </div> <!-- end card-container -->
+    </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <app-embauche></app-embauche>
+</div>

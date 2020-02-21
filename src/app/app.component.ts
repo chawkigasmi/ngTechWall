@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'formaAngular2019';
+  title = "Med Habib"
+  bgColor = "red"
+  show = false
+  cahngeStatus(){
+    this.show = !this.show;
+  }
 }
