@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   constructor(
-    public authentificationService: AuthentificationService,
+    private authentificationService: AuthentificationService,
     private router: Router
   ) { }
   visibility = false;
